@@ -24,6 +24,23 @@ Insert	              O(n)	                  O(n)
 Delete	              O(n)	                  O(n)
 
 SC - O(n)
+(technically O(m*n) - assume that there are n words, and each one of 'em on average has m letters. Then, m*n will be the worst case
+no. of nodes in the trie)
+
+IN INTERVIEW, YOU SHOULD SAY -
+For tries, it is very difficult to predict SC, because it depends on the input. Picture this - you have 26^3 words - 
+a                                                                           b                                          ...                              z
+aa                 ab                 ...az                     ba              bb               ...bz                                   za             zb              zz
+aaa,aab...aaz    aba,abb...abz      aza,azb...azz              baa,bab...baz    bba,bbb...bbz     bza,bzb...bzz                     zaa,zab...zaz    zba,zbb...zbz    zza,zzb...zzz
+Here, SC would be 26^3.
+
+However, if you have 26^3 words again, but all of them are abc, your SC would be O(3).
+
+That said, on average, we normally say that SC = O(n)
+(technically O(m*n) - assume that there are n words, and each one of 'em on average has m letters. Then, m*n will be the worst case
+no. of nodes in the trie)
+
+
 
 Root is empty string. A leaf (terminal) node will always be a complete word.
 https://en.wikipedia.org/wiki/File:Trie_example.svg
