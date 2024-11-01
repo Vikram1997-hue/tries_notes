@@ -61,4 +61,4 @@ now, the 2nd bit (do zero-based counting from the right) would be a guaranteed 1
 turn on means - 
 (1 << i) OR num
 
- */
+*/
