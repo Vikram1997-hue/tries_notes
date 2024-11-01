@@ -3,7 +3,7 @@
 
 const getKey = (node, ch) => node.children[ ch.charCodeAt(0) - 97 ];
 
-const putKey = (node, ch) => {
+const setKey = (node, ch) => {
     node.children[ ch.charCodeAt(0) - 97 ] = new Node();
 }
 
@@ -29,7 +29,7 @@ class Trie {
             if (!getKey(iterator, ch)) 
                 //then we don't have the full word in question, and need to start inserting it.
                 //so let's create a new Trie at this location.
-                putKey(iterator, ch);
+                setKey(iterator, ch);
             
             //else, move to the next character in the trie (i.e., move to the next reference trie)
             iterator = getKey(iterator, ch)
