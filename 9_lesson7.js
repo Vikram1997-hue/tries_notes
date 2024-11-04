@@ -54,7 +54,6 @@ class Trie {
         return str;
     }
 }
-//15:48
 
 let trie = new Trie();
 let arr = [0,1,2,3,4], queries = [[1,3], [5,6]];
